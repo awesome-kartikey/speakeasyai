@@ -14,7 +14,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "SpeakEasyAI Demo",
+  title: process.env.NEXT_PUBLIC_APP_NAME,
   description:
     "Convert your video or voice into a Blog Post in seconds with the power of AI!",
   icons: {

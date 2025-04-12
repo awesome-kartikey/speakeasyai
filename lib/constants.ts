@@ -28,4 +28,4 @@ export const plansMap = [
 export const ORIGIN_URL =
   process.env.NODE_ENV === "development"
     ? process.env.ORIGIN_URL_DEV || "http://localhost:3000" // Default to localhost if not set
-    : process.env.ORIGIN_URL_PROD || "https://speakeasyai-demo.vercel.app"; // Default to production URL if not set
+    : process.env.ORIGIN_URL_PROD || "https://videotonotes.vercel.app"; // Default to production URL if not set
