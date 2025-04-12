@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
   const sig = req.headers.get("stripe-signature");
 
-  let event;
+  let event: Stripe.Event; // Define event type
 
   try {
     event = stripe.webhooks.constructEvent(
@@ -31,26 +31,34 @@ export async function POST(req: NextRequest) {
             expand: ["line_items"],
           }
         );
-        console.log({ session });
+        console.log("Webhook received: checkout.session.completed", { session });
+        
 
         //connect to the db create or update user
         await handleCheckoutSessionCompleted({ session, stripe });
+        console.log("Webhook handled: checkout.session.completed");
         break;
       }
       case "customer.subscription.deleted": {
         // connect to db
         const subscriptionId = event.data.object.id;
+        console.log("Webhook received: customer.subscription.deleted", { subscriptionId })
 
         await handleSubscriptionDeleted({ subscriptionId, stripe });
+        console.log("Webhook handled: customer.subscription.deleted")
         break;
       }
       default:
         console.log(`Unhandled event type ${event.type}`);
     }
-    return NextResponse.json({
-      status: "success",
-    });
+    return NextResponse.json({ received: true });
+    
   } catch (err) {
-    return NextResponse.json({ status: "Failed", err });
+    console.error(`Webhook Error: ${(err as Error).message}`, { error: err });
+    if (err instanceof Stripe.errors.StripeSignatureVerificationError) {
+      return NextResponse.json({ status: "Failed", error: "Webhook signature verification failed." }, { status: 400 });
+  } else {
+      return NextResponse.json({ status: "Failed", error: "Webhook handler failed." }, { status: 500 });
+  }
   }
 }
