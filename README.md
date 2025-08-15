@@ -1,56 +1,99 @@
-# SpeakEasyAI - Convert your video or voice into a Blog Post in seconds with the power of AI!
+# SpeakEasyAI ✨
 
-Built with the Next.js 14 App Router, Clerk for Auth - with Passkeys, Github and Google Sign in, React, OpenAI - Whisper API, ShadCN UI library for components, React Markdown, NeonDb, UploadThing, Stripe for payments, Webhooks, TypeScript, TailwindCSS and more.
+SpeakEasyAI converts your video or audio files into well-structured, SEO-friendly blog posts in seconds using the power of AI. Upload your content, and let SpeakEasyAI handle the transcription and creative writing!
 
-![Project Image](https://www.speakeasyai.dev/og-image.png)
+![Project Image](https://www.speakeasyai.dev/og-image.png) (_Note: Ensure this image URL is correct or replace it with an actual screenshot_)
 
-## Features
+## 🚀 Description
 
-- 🌐 Next.js 14 App Router & Server Actions
-- 🤖 OpenAI API for audio transcription and blog post generation
-- 🔐 Authentication with Clerk (Passkeys, Github, and Google Sign-in)
-- 📝 AI-powered blog post generation based on audio transcription
-- 💳 Stripe integration for payments and subscription management
-- 💾 NeonDb for database management
-- 📤 UploadThing for file uploads
-- 🎙️ Audio and video file processing (up to 25MB)
-- 📜 TypeScript for type safety
-- 💅 TailwindCSS for styling
-- 🎨 ShadCN UI library for beautiful components
-- 🔒 Secure file handling and processing
-- 🪝 Webhook implementation for Stripe events
-- 💰 Stripe integration for custom pricing table, payment links, and subscriptions
-- 📊 User dashboard for managing blog posts
-- 🖋️ Markdown editor for blog post editing
-- 📱 Responsive design for mobile and desktop
-- 🔄 Real-time updates and path revalidation
-- 🚀 Deployment-ready (likely for Vercel)
-- 🔔 Toast notifications for user feedback
-- 📈 Performance optimizations
-- 🔍 SEO-friendly blog post generation
-- 📊 Recent blog posts display
-- 🔐 Protected routes and API endpoints
+This application leverages the latest web technologies to provide a seamless experience for content creators. Users can upload audio or video files, which are then transcribed using OpenAI's Whisper API. Subsequently, OpenAI's GPT model generates a blog post based on the transcription, mimicking the user's previous writing style for consistency. The platform includes user authentication, subscription plans managed via Stripe, a dashboard for managing posts, and an integrated Markdown editor for refining the generated content.
 
-## Getting started
+## ✨ Features
 
-To get started with this project, you need to do the following,
+- **AI-Powered Content Generation:**
+  - Transcribes audio/video using OpenAI Whisper.
+  - Generates blog posts using OpenAI GPT-4o-mini based on transcription and user's past writing style.
+- **File Uploads:** Supports audio and video files (up to 32MB) via UploadThing.
+- **Authentication:** Secure user sign-up/sign-in using Clerk (Email/Password, Google, GitHub, Passkeys).
+- **Subscription Plans:** Tiered plans (Basic, Pro) managed with Stripe checkout and webhooks.
+- **User Dashboard:** Central place for users to upload files and manage generated posts.
+- **Post Management:** View a list of generated posts and navigate to individual posts.
+- **Markdown Editor:** Edit and refine generated blog posts using an integrated MDX-based editor.
+- **Content Export:** Download edited blog posts as Markdown files.
+- **Protected Routes:** Secure access to dashboard and user-specific content.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Modern Tech:** Built with Next.js 14 App Router, Server Actions, and TypeScript.
+- **UI:** Clean interface using Tailwind CSS and ShadCN UI components.
+- **Notifications:** User feedback via toast notifications.
 
-1. Please fork the repo
-2. Copy the .env.example variables into a separate .env.local file
-3. Create the credentials mentioned in the Youtube tutorial to get started!
+## 💻 Tech Stack
 
-## 1. How to fork and clone
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS, PostCSS
+- **UI Library:** ShadCN UI, Radix UI
+- **Authentication:** Clerk
+- **Database:** NeonDb (Serverless Postgres)
+- **File Uploads:** UploadThing
+- **AI:** OpenAI API (Whisper, GPT-4o-mini)
+- **Payments:** Stripe (Checkout, Subscriptions, Webhooks)
+- **Markdown Editor:** `@mdxeditor/editor`
+- **Utilities:** `zod` (validation), `clsx`, `tailwind-merge`
+- **Development Environment:** Node.js, npm (optional: Nix)
 
-- If you want to make changes and contribute to this project, you'll need to create a fork first. Forking creates a copy of the original project in your own GitHub account. This lets you experiment with edits without affecting the main project.
+## ⚙️ Setup Instructions
 
-- Look for the "Fork" button in the top right corner of the project on GitHub. Clicking it will create a copy under your account with the same name.
+To set up the project locally, follow these steps:
 
-- After forking the project, you can clone it just like you usually do.
+1.  **Fork the Repository:**
+    Click the "Fork" button on the top right of the GitHub repository page.
 
-## Acknowledgements
+2.  **Clone Your Fork:**
 
-- [Clerk](https://go.clerk.com/5qOWrFA) for making this project possible
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/awesome-kartikey-speakeasyai.git
+    cd awesome-kartikey-speakeasyai
+    ```
 
-## License
+3.  **Install Dependencies:**
 
-[MIT](https://choosealicense.com/licenses/mit/)
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+4.  **Set Up Environment Variables:**
+
+    - Copy the example environment file:
+      ```bash
+      cp .env.example .env.local
+      ```
+    - Fill in the required API keys and secrets in `.env.local`. You'll need credentials for:
+      - Clerk (Authentication)
+      - Stripe (Payments)
+      - NeonDb (Database URL)
+      - UploadThing (File Uploads)
+      - OpenAI (AI Services)
+      - _(Refer to the respective services' documentation for obtaining these keys)_
+
+5.  **Run the Development Server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+6.  **Open the Application:**
+    Navigate to `http://localhost:3000` in your browser.
+
+## 🛠️ Usage
+
+1.  **Sign Up / Sign In:** Create an account or log in using one of the available methods (Email, Google, GitHub).
+2.  **Choose a Plan:** Select a subscription plan (Basic or Pro) during onboarding or via the Pricing section (handled by Stripe).
+3.  **Go to Dashboard:** Navigate to the Dashboard (/dashboard).
+4.  **Upload File:** Use the upload form to select an audio or video file (max 32MB).
+5.  **Transcription & Generation:** The file will be uploaded, transcribed, and a blog post will be generated automatically. You'll receive toast notifications about the progress.
+6.  **View/Edit Post:** Once generated, you'll be redirected to the post editor page (`/posts/[id]`). You can also find your posts listed on the `/posts` page.
+7.  **Edit & Export:** Use the Markdown editor to refine the post. You can export the final version as a `.md` file.
