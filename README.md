@@ -2,7 +2,19 @@
 
 SpeakEasyAI converts your video or audio files into well-structured, SEO-friendly blog posts in seconds using the power of AI. Upload your content, and let SpeakEasyAI handle the transcription and creative writing!
 
-![Project Image](https://www.speakeasyai.dev/og-image.png) (_Note: Ensure this image URL is correct or replace it with an actual screenshot_)
+![Project Image](https://www.speakeasyai.dev/og-image.png)
+
+## 📑 Table of Contents
+
+- [🚀 Description](#-description)
+- [✨ Features](#-features)
+- [💻 Tech Stack](#-tech-stack)
+- [⚙️ Setup Instructions](#️-setup-instructions)
+- [🛠️ Usage](#️-usage)
+- [❓ FAQ](FAQ.md)
+- [🏗️ Architecture](ARCHITECTURE.md)
+
+---
 
 ## 🚀 Description
 
@@ -97,3 +109,4 @@ To set up the project locally, follow these steps:
 5.  **Transcription & Generation:** The file will be uploaded, transcribed, and a blog post will be generated automatically. You'll receive toast notifications about the progress.
 6.  **View/Edit Post:** Once generated, you'll be redirected to the post editor page (`/posts/[id]`). You can also find your posts listed on the `/posts` page.
 7.  **Edit & Export:** Use the Markdown editor to refine the post. You can export the final version as a `.md` file.
+
