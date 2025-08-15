@@ -157,7 +157,5 @@ awesome-kartikey-speakeasyai/
 - **TypeScript:** Enhances code quality, maintainability, and developer productivity through static typing.
 - **Webhook-Driven Updates (Stripe):** Ensures reliable synchronization of subscription status between Stripe and the application database, even if the user closes their browser after payment.
 
-```
 
-```
 
