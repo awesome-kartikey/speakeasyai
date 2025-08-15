@@ -9,7 +9,7 @@ SpeakEasyAI is a full-stack web application built using Next.js 14 with the App 
 ```mermaid
 graph LR
     subgraph "User Browser"
-        A[React Frontend (Next.js)] --> B{Next.js Backend};
+        A["React Frontend (Next.js)"] --> B{Next.js Backend};
     end
 
     subgraph "Next.js Backend (Vercel/Server)"
@@ -160,3 +160,4 @@ awesome-kartikey-speakeasyai/
 ```
 
 ```
+
