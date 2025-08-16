@@ -4,18 +4,6 @@ SpeakEasyAI converts your video or audio files into well-structured, SEO-friendl
 
 ![Project Image](https://www.speakeasyai.dev/og-image.png)
 
-## 📑 Table of Contents
-
-- [🚀 Description](#-description)
-- [✨ Features](#-features)
-- [💻 Tech Stack](#-tech-stack)
-- [⚙️ Setup Instructions](#️-setup-instructions)
-- [🛠️ Usage](#️-usage)
-- [❓ FAQ](FAQ.md)
-- [🏗️ Architecture](ARCHITECTURE.md)
-
----
-
 ## 🚀 Description
 
 This application leverages the latest web technologies to provide a seamless experience for content creators. Users can upload audio or video files, which are then transcribed using OpenAI's Whisper API. Subsequently, OpenAI's GPT model generates a blog post based on the transcription, mimicking the user's previous writing style for consistency. The platform includes user authentication, subscription plans managed via Stripe, a dashboard for managing posts, and an integrated Markdown editor for refining the generated content.
@@ -63,8 +51,8 @@ To set up the project locally, follow these steps:
 2.  **Clone Your Fork:**
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/awesome-kartikey-speakeasyai.git
-    cd awesome-kartikey-speakeasyai
+    git clone https://github.com/<Your-Username>/speakeasyai.git
+    cd speakeasyai
     ```
 
 3.  **Install Dependencies:**
@@ -109,4 +97,3 @@ To set up the project locally, follow these steps:
 5.  **Transcription & Generation:** The file will be uploaded, transcribed, and a blog post will be generated automatically. You'll receive toast notifications about the progress.
 6.  **View/Edit Post:** Once generated, you'll be redirected to the post editor page (`/posts/[id]`). You can also find your posts listed on the `/posts` page.
 7.  **Edit & Export:** Use the Markdown editor to refine the post. You can export the final version as a `.md` file.
-

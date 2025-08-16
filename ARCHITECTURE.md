@@ -56,7 +56,7 @@ graph LR
 The project follows the standard Next.js App Router structure:
 
 ```
-awesome-kartikey-speakeasyai/
+speakeasyai/
 ├── actions/                 # Server Actions (e.g., edit-actions.ts, upload-actions.ts)
 ├── app/                     # Next.js application core
 │   ├── (logged-in)/         # Route group for authenticated users
@@ -156,6 +156,3 @@ awesome-kartikey-speakeasyai/
 - **ShadCN UI & Tailwind CSS:** Utility-first CSS (Tailwind) allows for rapid styling, while ShadCN UI provides accessible, unstyled, composable components that can be easily customized, promoting consistency and reducing boilerplate UI code.
 - **TypeScript:** Enhances code quality, maintainability, and developer productivity through static typing.
 - **Webhook-Driven Updates (Stripe):** Ensures reliable synchronization of subscription status between Stripe and the application database, even if the user closes their browser after payment.
-
-
-

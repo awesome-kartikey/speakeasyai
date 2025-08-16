@@ -60,13 +60,9 @@ Here are answers to some common questions about SpeakEasyAI.
 
 > AI generation can sometimes fail due to API issues or produce content that needs refinement.
 >
-> - **Failures:** The application provides toast notifications for errors. You might need to try uploading again or check the file format/size. If issues persist, contact support (if available) or check the service status pages for OpenAI/UploadThing.
+> - **Failures:** The application provides toast notifications for errors. You might need to try uploading again or check the file format/size. If issues persist, please open an issue on the GitHub repository or check the service status pages for OpenAI/UploadThing.
 > - **Quality:** Use the built-in Markdown editor to revise the generated content to meet your standards. The AI aims to provide a solid first draft.
 
 **14. Who built this project?**
 
-> This project was built by Ankita Kulkarni (as mentioned in the footer).
-
-```
-
-```
+> This project was built by Kartikey Kumar (as mentioned in the footer).
